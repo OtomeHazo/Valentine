@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You be my Valentine?</title>
+</head>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            background-color: #f1e8eb;
+            font-family: 'Nunito';
+        }
+        h1{
+            text-align: center;
+            color: #BB8F9E;
+        }
+        .gif-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            width: 75vmin;
+            height: 60vh;
+        }
+        .select-btns{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn{
+            margin: 10px;
+            font-size: 24px;
+            padding: 30px 60px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            color: #f2f2f2;
+        }
+        #yesBtn{
+            background-color: #47E170;
+        }
+        #noBtn{
+            background-color: #df3540;
+        }
+        @media screen and (max-width: 600px){
+            body{
+                height: 100vh;
+            }
+            h1{
+                font-size: 24px;
+            }
+            img{
+                height: 40vh;
+            }
+            .btn{
+                padding: 30px 60px;
+                font-size: 12px;
+            }
+        }
+
+    </style>
+<body>
+    <div class="container">
+        <div>
+            <h1>Will you be my Valentine?</h1>
+        </div>
+        <div class="gif-container">
+            <img src="assets/1.gif" alt="">
+        </div>
+        <div class="select-btns">
+            <button class="btn" id="yesBtn" onclick="nextPage()">Yes</button>
+            <button class="btn" id="noBtn" onclick="yesOnly()">No</button>
+        </div>
+    </div>
+</body>
+<script>
+    
+
+    const arrNo = ["Would You Reconsider?", "Please be my Valentine", "Are you sure?", "Please give it a second thought"]
+
+    let yesBtn = document.getElementById("yesBtn");
+    let noBtn = document.getElementById("noBtn");
+    let clickCount = 0;
+
+    function nextPage(){
+        window.location.href = "date.html";
+    }
+
+    function yesOnly(){
+        clickCount++;
+        
+        yesBtn.style.padding = `${30 + clickCount * 5}px ${60 + clickCount * 5}px`;
+        noBtn.style.padding = `${10 - clickCount * 2}px ${10 - clickCount * 2}px`;
+        noBtn.style.fontSize = `${12 - clickCount * 2}px`;
+
+        const randNum = Math.floor(Math.random() * arrNo.length);
+        const randMsg = arrNo[randNum];
+        noBtn.textContent = randMsg;
+    }
+
+
+</script>
+</html>

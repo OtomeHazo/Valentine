@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1e8eb;
+}
+
+.paper{
+    background-image: url("assets/paper.jpg");
+    background-size: 900px;
+    background-position: center center;
+    padding: 20px;
+    transform: rotateZ(10deg);
+    box-shadow: 1px 15px 20px 0 rgba(0,0,0, 0.5);
+    position: absolute;
+}
+.paper.img{
+    padding: 10px;
+}
+p{
+    font-family: 'Zeyada';
+    font-size: clamp(10vw, 3em, 100vw);
+    opacity: 0.75;
+    text-shadow: 2px 1.5px 1px rgba(0,0,0, 0.9); 
+}
+
+i:hover{
+    cursor: pointer;
+}
+img{
+    max-height: 300px;
+    width: 100%;
+    user-select: none;
+}
+.dani{
+    display: none;
+}
