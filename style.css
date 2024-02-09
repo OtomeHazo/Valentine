@@ -16,7 +16,7 @@ body{
     background-image: url("assets/paper.jpg");
     background-size: 900px;
     background-position: center center;
-    padding: 20px;
+
     transform: rotateZ(10deg);
     box-shadow: 1px 15px 20px 0 rgba(0,0,0, 0.5);
     position: absolute;
@@ -26,7 +26,7 @@ body{
 }
 p{
     font-family: 'Zeyada';
-    font-size:  4em;
+    font-size:  60px;
     opacity: 0.75;
     text-shadow: 2px 1.5px 1px rgba(0,0,0, 0.9); 
 }
